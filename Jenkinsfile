@@ -60,7 +60,7 @@ pipeline {
              
             steps 
 			{
-                sh "docker run -d -p 8003:8080 selectdata/samplewebapp"
+                sh "docker stop myapp && docker run -d -p 8003:8080 --name myapp selectdata/samplewebapp"
  
             }
         }
