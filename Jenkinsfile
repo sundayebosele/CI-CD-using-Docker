@@ -67,8 +67,8 @@ pipeline {
  stage('Run Docker container on remote hosts') {
              
             steps {
-                sh "docker -H ssh://root@34.204.10.106 run -d -p 8003:8080 selectdata/samplewebapp"
 		sh "docker -H ssh://root@34.204.10.106 stop myapp && docker rm myapp"
+		sh "docker -H ssh://root@34.204.10.106 run -d -p 8003:8080 selectdata/samplewebapp"
  
             }
         }
