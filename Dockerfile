@@ -1,4 +1,4 @@
-FROM tomcat:late
+FROM tomc
 
 LABEL maintainer="Nidhi Gupta"
 
